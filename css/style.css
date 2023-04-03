@@ -1,0 +1,19 @@
+body{
+  background: grey;
+  margin: 0;
+}
+
+.container{
+  margin: 48px auto;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 15px;
+}
+
+.block{
+  height: 100px;
+  background: black;
+  border: 5px solid grey;
+  cursor: pointer;
+}
