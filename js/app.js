@@ -37,13 +37,19 @@ const cardsPicklist = [...cards, ...cards]
 const blockNum = cardsPicklist.length
 
 let revealedNum = 0
-let activeBlock = null
-let awaitingMovement = false
+let firstSelection = null
+let secondSelection = false
 
 function handleClick(evt) {
   let cardImg = evt.target.getAttribute('data-card')
   evt.target.style.backgroundImage = 'url('+ cardImg +')'
+  evt.target.style.backgroundSize = 'cover'
+
+  
+  // console.log(evt)
+
 }
+
 
 
 init()
