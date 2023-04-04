@@ -1,19 +1,26 @@
-body{
-  background: grey;
+*{
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: palegreen;
+  height: 100vh;
 }
 
 .container{
   margin: 48px auto;
   width: max-content;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 150px);
   gap: 15px;
 }
 
 .block{
-  height: 100px;
-  background: black;
+  height: 200px;
+  background: silver;
   border: 5px solid grey;
   cursor: pointer;
 }
+
