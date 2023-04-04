@@ -36,23 +36,34 @@ let cards = [
 const cardsPicklist = [...cards, ...cards]
 const blockNum = cardsPicklist.length
 
+// const card = document.querySelectorAll('.block')
+
 let revealedNum = 0
 let firstSelection = null
-let secondSelection = false
-
-function handleClick(evt) {
-  let cardImg = evt.target.getAttribute('data-card')
-  evt.target.style.backgroundImage = 'url('+ cardImg +')'
-  evt.target.style.backgroundSize = 'cover'
-
-  
-  // console.log(evt)
-
-}
-
-
+let secondSelection = null
 
 init()
+
+function handleClick(evt) {
+  if (firstSelection === null) {
+    firstSelection = evt.target
+    firstSelection.style.backgroundImage = 'url('+ firstSelection.getAttribute('data-card')+')'
+    firstSelection.style.backgroundSize = 'cover'
+  }
+}
+
+// function handleClick(evt) {
+//   let cardImg = evt.target.getAttribute('data-card')
+//   evt.target.style.backgroundImage = 'url('+ cardImg +')'
+//   evt.target.style.backgroundSize = 'cover'
+
+  
+  
+
+// }
+
+
+
 
 function buildBlock(card) {
   const element = document.createElement('div')
