@@ -1,4 +1,5 @@
 const cardsContainer = document.querySelector('.container')
+
 let cards = [
   {
     name: 'c07',
@@ -33,6 +34,7 @@ let cards = [
     img: 'images/spades/spades-r08.svg'
   },
 ]
+
 const cardsPicklist = [...cards, ...cards]
 const blockNum = cardsPicklist.length
 
@@ -49,6 +51,12 @@ function handleClick(evt) {
     firstSelection = evt.target
     firstSelection.style.backgroundImage = 'url('+ firstSelection.getAttribute('data-card')+')'
     firstSelection.style.backgroundSize = 'cover'
+  } else if (secondSelection === null) {
+    secondSelection = evt.target
+    secondSelection.style.backgroundImage = 'url('+ secondSelection.getAttribute('data-card')+')'
+    secondSelection.style.backgroundSize = 'cover'
+
+    
   }
 }
 
